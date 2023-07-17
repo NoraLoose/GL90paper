@@ -254,19 +254,7 @@ def read_unparameterized_runs(exps, read_from_time_list=True, read_snapshots=Fal
 
 def read_offline_runs(exps):
     chunks = {'time': 1}
-    time_list = [2402, 2502, 2602, 2702, 2802]
     for exp in exps:
-        #ds
-        for i, time in zip(range(len(time_list)), time_list):
-            filename = '%s/averages_%08d_filtered_fac%i' %(exps[exp]['dir_scratch'], time, exps[exp]['filter_fac']) 
-            ds_tmp = xr.open_zarr(filename, decode_times=False, chunks=chunks)
-    
-            if i == 0:
-                ds = ds_tmp
-            else:
-                ds = xr.combine_nested([ds, ds_tmp], concat_dim='time', combine_attrs='drop_conflicts') 
-        exps[exp]['ds'] = ds
-
         # time averaged diagnostics    
         filename = '%s/time_averaged_diags_fac%i_500days' %(exps[exp]['dir_work'], exps[exp]['filter_fac'])
         file_exists = exists(filename)
@@ -275,24 +263,8 @@ def read_offline_runs(exps):
                 exps[exp]['dst'] = dst
 
         #energy diagnostics
-        for i, time in zip(range(len(time_list)), time_list):
-            filename = '%s/bleck_cycle_%08d_fac%i' %(exps[exp]['dir_scratch'], time, exps[exp]['filter_fac']) 
-            ds_tmp = xr.open_zarr(filename, decode_times=False, chunks=chunks)
-    
-            if i == 0:
-                ds = ds_tmp
-            else:
-                ds = xr.combine_nested([ds, ds_tmp], concat_dim='time', combine_attrs='drop_conflicts') 
-        exps[exp]['ds_energy'] = ds
- 
         filename = '%s/bleck_cycle_fac%i_500days.nc' % (exps[exp]['dir_work'], exps[exp]['filter_fac'])
-        ds = xr.open_dataset(filename, decode_times=False)
-
-        filename = '%s/MKE2MPE_TWA_inaccurate_fac%i_500days.nc' % (exps[exp]['dir_work'], exps[exp]['filter_fac'])
-        file_exists = exists(filename)
-        if file_exists:
-            ds2 = xr.open_dataset(filename, decode_times=False)
-            ds['MKE_to_MPE_TWA_inaccurate'] = ds2['MKE_to_MPE_TWA_inaccurate']
+        ds = xr.open_dataset(filename, decode_times=False, chunks=chunks)
 
         exps[exp]['dst_energy'] = ds
         #st and grid
