@@ -1,0 +1,23 @@
+#!/bin/bash
+
+### Job Name
+#PBS -N 0.25GL800
+
+### Project code
+#PBS -A P93300012
+#PBS -l walltime=11:59:00
+#PBS -q regular
+
+### Merge output and error files
+#PBS -j oe
+#PBS -k eod
+
+### Select 8 nodes with 36 CPUs each for a total of 288 MPI processes
+#PBS -l select=16:ncpus=36:mpiprocs=36
+
+### Send email on abort, begin and end
+#PBS -m abe
+### Specify mail recipient
+
+### Run the executable
+mpiexec_mpt  /glade/work/noraloose/NeverWorld2/build/intel/ocean_only/repro/MOM6

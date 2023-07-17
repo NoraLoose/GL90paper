@@ -1,0 +1,6 @@
+figures/
+movies/
+MOM6/
+__pycache__/
+.ipynb_checkpoints/
+experiments/*/*/INPUT/MOM.res.nc
