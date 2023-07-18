@@ -3,7 +3,7 @@
 # constant kappa
 
 nw2_0.5deg_N15_KHTH800:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.5deg/nw2_0.5deg_N15_KHTH800/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.5deg/nw2_0.5deg_N15_KHTH800/
     - degree            : 0.5
     - param             : GM
     - coeff             : 800
@@ -14,7 +14,7 @@ nw2_0.5deg_N15_KHTH800:
     - time              : 76501
 
 nw2_0.5deg_N15_KHGL800_hbbl5:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.5deg/nw2_0.5deg_N15_KHGL800_hbbl5/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.5deg/nw2_0.5deg_N15_KHGL800_hbbl5/
     - degree            : 0.5
     - param             : GL
     - coeff             : 800
@@ -31,7 +31,7 @@ nw2_0.5deg_N15_KHGL800_hbbl5:
 # constant kappa
 
 nw2_0.25deg_N15_KHTH300:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.25deg/nw2_0.25deg_N15_KHTH300/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.25deg/nw2_0.25deg_N15_KHTH300/
     - degree            : 0.25
     - param             : GM
     - coeff             : 300
@@ -42,7 +42,7 @@ nw2_0.25deg_N15_KHTH300:
     - time              : 76501
 
 nw2_0.25deg_N15_KHGL300_hbbl5:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.25deg/nw2_0.25deg_N15_KHGL300_hbbl5/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.25deg/nw2_0.25deg_N15_KHGL300_hbbl5/
     - degree            : 0.25
     - param             : GL
     - coeff             : 300
@@ -54,7 +54,7 @@ nw2_0.25deg_N15_KHGL300_hbbl5:
     - time              : 76501
 
 nw2_0.25deg_N15_KHTH800:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.25deg/nw2_0.25deg_N15_KHTH800/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.25deg/nw2_0.25deg_N15_KHTH800/
     - degree            : 0.25
     - param             : GM
     - coeff             : 800
@@ -65,7 +65,7 @@ nw2_0.25deg_N15_KHTH800:
     - time              : 76501
 
 nw2_0.25deg_N15_KHGL800_hbbl5:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.25deg/nw2_0.25deg_N15_KHGL800_hbbl5/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.25deg/nw2_0.25deg_N15_KHGL800_hbbl5/
     - degree            : 0.25
     - param             : GL
     - coeff             : 800
@@ -81,7 +81,7 @@ nw2_0.25deg_N15_KHGL800_hbbl5:
 # constant kappa
 
 nw2_0.125deg_N15_KHTH100:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.125deg/nw2_0.125deg_N15_KHTH100/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.125deg/nw2_0.125deg_N15_KHTH100/
     - degree            : 0.125
     - param             : GM
     - coeff             : 100
@@ -92,7 +92,7 @@ nw2_0.125deg_N15_KHTH100:
     - time              : 27501
 
 nw2_0.125deg_N15_KHGL100_hbbl5:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.125deg/nw2_0.125deg_N15_KHGL100_hbbl5/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.125deg/nw2_0.125deg_N15_KHGL100_hbbl5/
     - degree            : 0.125
     - param             : GL
     - coeff             : 100
@@ -104,7 +104,7 @@ nw2_0.125deg_N15_KHGL100_hbbl5:
     - time              : 27501
 
 nw2_0.125deg_N15_KHTH800:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.125deg/nw2_0.125deg_N15_KHTH800/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.125deg/nw2_0.125deg_N15_KHTH800/
     - degree            : 0.125
     - param             : GM
     - coeff             : 800
@@ -116,7 +116,7 @@ nw2_0.125deg_N15_KHTH800:
 
 
 nw2_0.125deg_N15_KHGL800_hbbl5:
-    - dir               : /glade/u/home/noraloose/GL90_paper/experiments/0.125deg/nw2_0.125deg_N15_KHGL800_hbbl5/
+    - dir               : /glade/u/home/noraloose/GL90paper/experiments/0.125deg/nw2_0.125deg_N15_KHGL800_hbbl5/
     - degree            : 0.125
     - param             : GL
     - coeff             : 800
