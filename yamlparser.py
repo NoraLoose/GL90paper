@@ -210,23 +210,23 @@ def read_stats(run):
 def read_unparameterized_runs(exps, read_from_time_list=True, read_snapshots=False):
     chunks = {'time': 1}
     for exp in exps:
-        if read_from_time_list:
-            file_list = []
-            for time in exps[exp]['times']:
-                filename = '%s/averages_%08d.nc' % (exps[exp]['dir'], time)
-                file_list.append(filename)
-            ds = xr.open_mfdataset(file_list , decode_times=False, chunks=chunks, combine='by_coords', parallel=True)
-        else:
-            ds = xr.open_mfdataset('%s/averages_*.nc' %exps[exp]['dir'], decode_times=False, chunks=chunks, combine='by_coords')
-            ds = ds.isel(time=slice(-100, None))
-        exps[exp]['ds'] = ds
-        
-        # time averaged diagnostics    
-        filename = '%s/time_averaged_diags_500days' %exps[exp]['dir_work']
-        file_exists = exists(filename)
-        if file_exists:
-                dst = xr.open_zarr(filename, decode_times=False, chunks=chunks)
-                exps[exp]['dst'] = dst
+        #if read_from_time_list:
+        #    file_list = []
+        #    for time in exps[exp]['times']:
+        #        filename = '%s/averages_%08d.nc' % (exps[exp]['dir'], time)
+        #        file_list.append(filename)
+        #    ds = xr.open_mfdataset(file_list , decode_times=False, chunks=chunks, combine='by_coords', parallel=True)
+        #else:
+        #    ds = xr.open_mfdataset('%s/averages_*.nc' %exps[exp]['dir'], decode_times=False, chunks=chunks, combine='by_coords')
+        #    ds = ds.isel(time=slice(-100, None))
+        #exps[exp]['ds'] = ds
+        #
+        ## time averaged diagnostics    
+        #filename = '%s/time_averaged_diags_500days' %exps[exp]['dir_work']
+        #file_exists = exists(filename)
+        #if file_exists:
+        #        dst = xr.open_zarr(filename, decode_times=False, chunks=chunks)
+        #        exps[exp]['dst'] = dst
 
         ## snapshots
         if read_snapshots:
@@ -242,11 +242,11 @@ def read_unparameterized_runs(exps, read_from_time_list=True, read_snapshots=Fal
         exps[exp]['os'] = stats
             
             
-        filename = '%s//static.nc' % (exps[exp]['dir'])
-        st = xr.open_dataset(filename, decode_times=False)
-        grid = make_grid(st, ds)
-        exps[exp]['st'] = st
-        exps[exp]['grid'] = grid
+        #filename = '%s//static.nc' % (exps[exp]['dir'])
+        #st = xr.open_dataset(filename, decode_times=False)
+        #grid = make_grid(st, ds)
+        #exps[exp]['st'] = st
+        #exps[exp]['grid'] = grid
         
         degree = exps[exp]['degree']
 
