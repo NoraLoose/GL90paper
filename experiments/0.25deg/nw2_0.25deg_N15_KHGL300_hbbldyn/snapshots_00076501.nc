@@ -1,1 +1,0 @@
-/glade/p/univ/unyu0004/noraloose/NeverWorld2/refactored_zero_at_bottom/parameterized_0.25deg_from_baseline/nw2_0.25deg_N15_KHGL300/snapshots_00076501.nc
